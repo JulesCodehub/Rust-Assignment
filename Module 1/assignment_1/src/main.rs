@@ -15,19 +15,24 @@ fn main() {
     // Define a Mutable variable for some temperature xxF
     let mut temperature = 16.0;
 
-    let store = temperature;
-
     celsius_to_fahrenheit(temperature);
 
     // Convert to celcius and print result
     print!("Original temperature: {}, ", temperature);
-
+    
     temperature = fahrenheit_to_celsius(temperature);
-
+    
     println!("Conversion to Celsius: {}", temperature);
 
     // Use a loop to convert the next 5 integers
     for offset in 1..6 {
-        println!("New temperature: {}, Conversion to Celsius: {}", store+offset as f64, fahrenheit_to_celsius(store + offset as f64));
+
+        temperature = 16.0 + offset as f64;
+
+        print!("New temperature: {}, ", temperature);
+
+        temperature = fahrenheit_to_celsius(temperature);
+
+        println!("Conversion to Celsius: {}", temperature);
     }
 }
