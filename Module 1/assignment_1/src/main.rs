@@ -16,11 +16,10 @@ fn main() {
     let mut temperature = 16.0;
 
     // Convert to celcius and print result
-    println!("Original temperature: {}", temperature);
-    println!("Conversion to Celsius: {}", fahrenheit_to_celsius(temperature));
+    println!("Original temperature: {}, Conversion to Celsius: {}", temperature, fahrenheit_to_celsius(temperature));
 
     // Use a loop to convert the next 5 integers
     for offset in 1..6 {
-        println!("{}", offset);
+        println!("New temperature: {}, Conversion to Celsius: {}", temperature+offset as f64, fahrenheit_to_celsius(temperature + offset as f64));
     }
 }
