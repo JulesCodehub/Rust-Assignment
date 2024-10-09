@@ -22,4 +22,12 @@ fn main() {
     
     
     // largest number loop
+    let mut largest = my_ten_numbers[0];
+    for idx in 1..my_ten_numbers.len() {
+        if my_ten_numbers[idx] > largest {
+            largest = my_ten_numbers[idx];
+        }
+    }
+    println!("Largest number is: {}", largest);
+    
 }
