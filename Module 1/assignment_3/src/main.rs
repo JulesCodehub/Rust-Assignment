@@ -1,13 +1,9 @@
 fn check_guess(guess: i32, secret: i32) -> i32 {
     
-    if guess == secret {
-        return 0
-    }
+    if guess == secret { return 0 }
     
-    if guess > secret {
-        return 1
-    }
-    
+    if guess > secret { return 1 }
+
     -1
 }
 
@@ -15,7 +11,7 @@ fn main() {
     
     let mut secret = 32;
     let mut count = 0;
-    let mut guess = 0;
+    let mut guess;
     
     // main loop
     loop {
@@ -44,7 +40,6 @@ fn main() {
                 break
             }
         }
-
     }
 
     // print our result
