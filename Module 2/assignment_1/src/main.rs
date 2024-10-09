@@ -1,5 +1,21 @@
 fn sum_with_step(total: &mut i32, low: i32, high: i32, step: i32) {
-    //
+    
+    // we will be adding both ends of the ranges anyway, i find it easier to just add them now
+    *total += low + high;
+    
+    //we start at our first step
+    let mut current = low + step;
+    
+    
+    loop {
+        // if we ever equal or go beyond we stop
+        if current >= high {
+            break;
+        }
+        
+        *total += current;
+        current += step;
+    }
 }
 
 fn main() {
