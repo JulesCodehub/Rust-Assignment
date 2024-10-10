@@ -7,6 +7,8 @@ fn main() {
     //10 random numbers
     let my_ten_numbers: [i32; 10] = [ 16, 21, 24, 23, 16, 13, 10, 15, 2, 10 ];
     
+    println!("{:?}", my_ten_numbers);
+
     // fizz buzz loop
     for idx in 0..my_ten_numbers.len() {
         let var = my_ten_numbers[idx];
