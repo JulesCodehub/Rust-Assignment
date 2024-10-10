@@ -11,7 +11,7 @@ fn main() {
     
     let mut secret = 32;
     let mut count = 0;
-    let mut guess;
+    let mut guess = -1;
     
     // main loop
     loop {
@@ -19,8 +19,8 @@ fn main() {
         //increment our attempt count
         count += 1;
         
-        // set the guess variable
-        guess = (rand::random::<f64>() * 50.0) as i32;
+        // increment our guess
+        guess += 1;
         
         // call our check_guess function
         let var = check_guess(guess, secret);
